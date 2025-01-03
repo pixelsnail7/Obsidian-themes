@@ -1,0 +1,27 @@
+:root {
+	--prime: #8155a7;
+	--prime-hover: #a75fe6;
+}
+
+.markdown-preview-section > div img {
+    border-radius: 8px;
+    filter: brightness(80%);
+}
+
+.markdown-preview-section > div img:hover {
+    filter: brightness(100%);
+    transition: all 0.3s linear;
+}
+
+.markdown-preview-section > div a {
+    color: var(--prime);
+}
+
+.markdown-preview-section > div a:hover {
+	color: var(--prime-hover);
+}
+
+.markdown-preview-section > div hr {
+    border: 1px solid var(--prime);
+}
+
