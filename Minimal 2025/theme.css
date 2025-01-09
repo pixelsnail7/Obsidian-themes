@@ -3,25 +3,58 @@
 	--prime-hover: #a75fe6;
 }
 
+/* Image style */
 .markdown-preview-section > div img {
     border-radius: 8px;
     filter: brightness(80%);
 }
 
+/* Image hover style */
 .markdown-preview-section > div img:hover {
     filter: brightness(100%);
     transition: all 0.3s linear;
 }
 
+/* anchor tag style */
 .markdown-preview-section > div a {
     color: var(--prime);
 }
 
+/* Link style */
 .markdown-preview-section > div a:hover {
 	color: var(--prime-hover);
 }
 
+/* Horizontal line */
 .markdown-preview-section > div hr {
     border: 1px solid var(--prime);
 }
 
+/* Highlight style */
+.markdown-preview-section > div mark {
+    border-radius: 1rem;
+    padding: 0.2rem 0.5rem;
+    background-color: var(--mark);
+    animation: mark-animation 1s infinite;
+}
+
+/* Highlight style hover */
+.markdown-preview-section > div mark:hover {
+    box-shadow: 0 0 1rem 0 var(--prime);
+    transition: var(--animation-speed);
+    cursor: pointer;
+}
+
+/* Mark animation */
+@keyframes mark-animation {
+    0% {
+        background-color: var(--mark);
+    }
+    50% {
+        background-color: var(--prime);
+    }
+    100% {
+        background-color: var(--mark);
+    }
+    
+}
