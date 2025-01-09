@@ -1,6 +1,17 @@
 :root {
-	--prime: #8155a7;
+	--prime: #a170cc;
 	--prime-hover: #a75fe6;
+	--bold: #d46262;
+    --mark: #8872eb;
+
+	--animation-speed: all 0.3s ease-in-out;
+}
+
+/* Body style */
+body {
+    --bold-color: var(--bold);
+    --italic-color: var(--prime);
+    --h6-style: italic;
 }
 
 /* Image style */
@@ -9,25 +20,73 @@
     filter: brightness(80%);
 }
 
-/* Image hover style */
+/* Image style hover */
 .markdown-preview-section > div img:hover {
     filter: brightness(100%);
-    transition: all 0.3s linear;
-}
-
-/* anchor tag style */
-.markdown-preview-section > div a {
-    color: var(--prime);
+    transition: var(--animation-speed);
 }
 
 /* Link style */
+.markdown-preview-section > div a {
+    color: var(--prime);
+	text-decoration: none;
+}
+
+/* Link style hover */
 .markdown-preview-section > div a:hover {
 	color: var(--prime-hover);
 }
 
-/* Horizontal line */
+/* Horizontal rule style*/
 .markdown-preview-section > div hr {
     border: 1px solid var(--prime);
+}
+
+/* Heading style */
+.markdown-preview-section > div h1,
+.markdown-preview-section > div h2,
+.markdown-preview-section > div h3,
+.markdown-preview-section > div h4,
+.markdown-preview-section > div h5,
+.markdown-preview-section > div h6 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+	cursor: pointer;
+}
+
+/* Label style */
+.markdown-preview-section > div label {
+    color: var(--prime);
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+/* Checkbox style */
+.markdown-preview-section > div input[type="checkbox"] {
+	border: 1px solid var(--prime);
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+	cursor: pointer;
+}
+
+/* Checkbox style hover */
+.markdown-preview-section > div input[type="checkbox"]:hover {
+	box-shadow: 0 0 1rem 0 var(--prime);
+	transition: var(--animation-speed);
+}
+
+/* Button style */
+.markdown-preview-section > div button {
+	border: 2px solid var(--prime);
+}
+
+/* Button style hover */
+.markdown-preview-section > div button:hover {
+	box-shadow: 0 0 1rem 0 var(--prime);
+	transition: var(--animation-speed);
 }
 
 /* Highlight style */
